@@ -23,3 +23,4 @@ readdirSync('./Route').
 
 
 app.listen(5000, () => console.log('Sever Runing on port 5000'))
+// จบบท 1
