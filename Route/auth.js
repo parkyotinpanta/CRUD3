@@ -1,10 +1,12 @@
-const express = require ('express')
+const express = require('express')
 const router = express.Router()
+const { register, login } = require('../Controllers/auth')
 
 
-router.get('/auth',(req,res)=>{
-    res.send ('hello auth Endporint')
-})
+
+// http://localhost:5000/api/login
+router.post('/register', register)
+router.post('/login', login)
 
 
 module.exports = router

@@ -44,12 +44,10 @@ exports.update = async (req, res) => {
 exports.remove = async (req, res) => {
     try {
         const id = req.params.id
-        const remove = await Product
-        .findOneAndDelete({ _id: id })
-        .exec()
+        const remove = await Product.findOneAndDelete({ _id: id }).exec()
         res.send(remove)
     } catch (err) {
         console.log(err)
-        res.status(500).send('delete Error')
+        res.status(500).send('Delete Error')
     }
 }
